@@ -1,0 +1,5 @@
+C:\Users\hp\Desktop\New folder (2)\Solution1\WikiNepalData\bin\Debug\netcoreapp3.1\WikiNepalData.deps.json
+C:\Users\hp\Desktop\New folder (2)\Solution1\WikiNepalData\bin\Debug\netcoreapp3.1\WikiNepalData.dll
+C:\Users\hp\Desktop\New folder (2)\Solution1\WikiNepalData\obj\Debug\netcoreapp3.1\WikiNepalData.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\New folder (2)\Solution1\WikiNepalData\obj\Debug\netcoreapp3.1\WikiNepalData.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\New folder (2)\Solution1\WikiNepalData\obj\Debug\netcoreapp3.1\WikiNepalData.AssemblyInfo.cs

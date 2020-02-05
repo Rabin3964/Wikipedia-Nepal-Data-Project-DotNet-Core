@@ -1,0 +1,32 @@
+﻿@model WikiNepalData.Model.NepalDataModel
+
+@{
+    ViewData["Title"] = "SearchDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>SearchDetails</h1>
+
+<div>
+ 
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Paragraph)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Paragraph)
+        </dd>
+        <dd> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/492px-Flag_of_Nepal.svg.png" alt="Alternate Text" style="height:200px"/> </dd>
+    </dl>
+</div>
+<div>
+  
+    <a asp-action="Search" class="btn btn-success">Back to List</a>
+</div>
