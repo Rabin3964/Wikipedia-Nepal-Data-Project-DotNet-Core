@@ -1,0 +1,82 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 25px;
+            border: 1px solid grey;
+            float: left;
+            width: 80%;
+            border-radius: 50px 0px 0px 50px;
+            background: #f1f1f1;
+        }
+
+        form.example button {
+            float: left;
+            width: 15%;
+            padding: 10px;
+            background: #2196F3;
+            border-radius: 0px 20px 20px 0px;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+            form.example button:hover {
+                background: #0b7dda;
+            }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="Top">
+        <div class="Image" style="margin-left:450px; padding-top:50px;">
+            <img src="~/img/VisitNepal.jpg" />
+        </div>
+        <div class="text" style="margin-left:600px; "><h1 style="color:blue;font-family: 'Lobster', cursive;">Wiki<span style="font-family:'Sigmar One', cursive;color:red;">Nepal</span>Data   <span style="color:green;font-family: 'Lobster', cursive;"> Search ...</span> </h1> </div>
+        <form class="example" asp-controller="NepalDataModels" asp-action="Search" method="get" style="margin-left:550px; max-width:500px;">
+            <input type="text" name="searchString">
+            <button type="submit"><i class="fa fa-search" style="height:28.5px;"></i></button>
+        </form>
+
+    </div>
+
+    <footer class="border-top footer text-muted" style="margin-left:660px;margin-top:170px;">
+
+        Programmed by 'Rabin Raut' &copy;
+
+    </footer>
+
+</body>
+</html>
+

@@ -1,4 +1,4 @@
-﻿@*@model IEnumerable<WikiNepalData.Model.NepalDataModel>*@
+﻿
 
 @model PaginatedList<WikiNepalData.Model.NepalDataModel>
 
@@ -8,55 +8,54 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<form asp-controller="NepalDataModels" asp-action="Search" method="get">
+<form asp-controller="NepalDataModels" asp-action="Search" method="get" style="margin-top:57px;position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background-color:#FFFFFF;">
     <p>
-        Search: <input type="text" name="SearchStrings">
-        <button type="submit"> Search</button>
+        <b>Search:</b> <input type="text" name="searchString">
+        <button type="submit" class="btn btn-success"> Search</button>
 
-        <label style="padding-left:650px ; font-weight: bold"> Time :</label> @ViewBag.Time sec
+        <b><label style="padding-left:400px ; "> Found </label> @ViewBag.SearchedData Results( @ViewBag.Time sec) </b>
     </p>
 
 </form>
 
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.First().Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.First().Paragraph)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
+<table class="table" style="margin-top:115px;">
+
     <tbody>
         @foreach (var item in Model)
         {
+
+
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/492px-Flag_of_Nepal.svg.png" alt="Alternate Text" style="height:35px" />
+                    <b>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </b>
+
+                    <br />
                     @if (item.Paragraph.Length > 250)
                     {
-                        @item.Paragraph.Substring(0, 250)
+                        @item.Paragraph.Substring(0, 250) <a asp-action="SearchDetails" asp-route-id="@item.Id">...continue</a>
                     }
                     else
                         @Html.DisplayFor(modelItem => item.Paragraph)
 
                 </td>
-                  
-                <td>
-                
-                    <a asp-action="SearchDetails" asp-route-id="@item.Id" class="btn btn-info">Details</a> 
-                 
-                </td>
+
             </tr>
+
+
         }
     </tbody>
 </table>
+
+
+
 
 
 @{
@@ -65,16 +64,16 @@
 }
 
 <a asp-action="Search"
-   asp-route-sortOrder="@ViewData["CurrentSorts"]"
-   asp-route-pageNumber="abc+ @(Model.PageIndex - 1)"
-   asp-route-currentFilter="@ViewData["CurrentFilters"]"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
    class="btn btn-default @prevDisabled">
     Previous
 </a>
 <a asp-action="Search"
-   asp-route-sortOrder="@ViewData["CurrentSorts"]"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
    asp-route-pageNumber="@(Model.PageIndex + 1)"
-   asp-route-currentFilter="@ViewData["CurrentFilters"]"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
    class="btn btn-default @nextDisabled">
     Next
 </a>

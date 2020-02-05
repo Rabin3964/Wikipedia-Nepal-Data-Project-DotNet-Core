@@ -59,7 +59,7 @@ namespace WikiDataNepal
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=NepalDataModels}/{action=Search}/{id?}");
+                    pattern: "{controller=NepalDataModels}/{action=Home}/{id?}");
             });
         }
     }

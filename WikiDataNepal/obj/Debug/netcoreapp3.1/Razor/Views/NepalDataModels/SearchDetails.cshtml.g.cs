@@ -27,7 +27,7 @@ using WikiDataNepal.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b7060b77df5592fcb796b641017759730b491621", @"/Views/NepalDataModels/SearchDetails.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"013d33dcf11024b0baa7ea8694ee171e648e9276", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e3c00c830f5ed33625bee0393e3405ed86a8d825", @"/Views/_ViewImports.cshtml")]
     public class Views_NepalDataModels_SearchDetails : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<WikiNepalData.Model.NepalDataModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Search", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

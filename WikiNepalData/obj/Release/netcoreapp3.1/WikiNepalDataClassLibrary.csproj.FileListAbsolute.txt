@@ -1,0 +1,10 @@
+C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\bin\Release\netcoreapp3.1\WikiNepalDataClassLibrary.deps.json
+C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\bin\Release\netcoreapp3.1\WikiNepalDataClassLibrary.runtimeconfig.json
+C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\bin\Release\netcoreapp3.1\WikiNepalDataClassLibrary.runtimeconfig.dev.json
+C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\bin\Release\netcoreapp3.1\WikiNepalDataClassLibrary.dll
+C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\bin\Release\netcoreapp3.1\WikiNepalDataClassLibrary.pdb
+C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\obj\Release\netcoreapp3.1\WikiNepalDataClassLibrary.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\obj\Release\netcoreapp3.1\WikiNepalDataClassLibrary.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\obj\Release\netcoreapp3.1\WikiNepalDataClassLibrary.AssemblyInfo.cs
+C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\obj\Release\netcoreapp3.1\WikiNepalDataClassLibrary.dll
+C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\obj\Release\netcoreapp3.1\WikiNepalDataClassLibrary.pdb

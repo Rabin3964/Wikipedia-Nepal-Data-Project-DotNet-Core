@@ -21,8 +21,50 @@ namespace WikiDataNepal.Controllers
             _context = context;
         }
 
+        public IActionResult Home()
+        {
+          
+            return View( );
+        }
+
         // GET: NepalDataModels
-        public async Task<IActionResult> Index(string searchString, int? pageNumber, string sortOrder, string currentFilter)
+        public async Task<IActionResult> Index(string SearchString, int? pageNumber, string sortOrder, string currentFilter)
+        {
+            ViewData["CurrentSort"] = sortOrder;
+            if (SearchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                SearchString = currentFilter;
+            }
+
+            ViewData["CurrentFilter"] = SearchString;
+
+            var Datas = from d in _context.Test select d;
+
+            Stopwatch sw = Stopwatch.StartNew();
+
+            if (!string.IsNullOrWhiteSpace(SearchString))
+            {
+                Datas = Datas.Where(d => d.Title.Contains(SearchString) || d.Paragraph.Contains(SearchString));
+
+            }
+            sw.Stop();
+
+            ViewBag.SearchedData = Datas.Count();
+
+            ViewBag.Time = sw.Elapsed.TotalMilliseconds;
+
+            int pageSize = 10;
+            
+
+            return View(await PaginatedList<NepalDataModel>.CreateAsync(Datas.AsNoTracking(), pageNumber ?? 1 , pageSize));
+        }
+
+
+        public async Task<IActionResult> Search(string searchString, int? pageNumber, string sortOrder, string currentFilter)
         {
             ViewData["CurrentSort"] = sortOrder;
             if (searchString != null)
@@ -37,6 +79,7 @@ namespace WikiDataNepal.Controllers
             ViewData["CurrentFilter"] = searchString;
 
             var Datas = from d in _context.Test select d;
+            
 
             Stopwatch sw = Stopwatch.StartNew();
 
@@ -45,44 +88,9 @@ namespace WikiDataNepal.Controllers
                 Datas = Datas.Where(d => d.Title.Contains(searchString) || d.Paragraph.Contains(searchString));
 
             }
-
             sw.Stop();
 
-
-            ViewBag.Time = sw.Elapsed.TotalMilliseconds;
-
-            int pageSize = 10;
-
-            return View(await PaginatedList<NepalDataModel>.CreateAsync(Datas.AsNoTracking(), pageNumber ?? 1 , pageSize));
-        }
-
-
-        public async Task<IActionResult> Search(string searchStrings, int? pageNumber, string sortOrders, string currentFilter)
-        {
-            ViewData["CurrentSorts"] = sortOrders;
-            if (searchStrings != null)
-            {
-                pageNumber = 1;
-            }
-            else
-            {
-                searchStrings = currentFilter;
-            }
-
-            ViewData["CurrentFilters"] = searchStrings;
-
-            var Datas = from d in _context.Test select d;
-
-            Stopwatch sw = Stopwatch.StartNew();
-
-            if (!string.IsNullOrWhiteSpace(searchStrings))
-            {
-                Datas = Datas.Where(d => d.Title.Contains(searchStrings) || d.Paragraph.Contains(searchStrings));
-
-            }
-
-            sw.Stop();
-
+            ViewBag.SearchedData = Datas.Count();
 
             ViewBag.Time = sw.Elapsed.TotalMilliseconds;
 

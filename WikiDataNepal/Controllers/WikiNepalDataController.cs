@@ -14,17 +14,17 @@ namespace WikiDataNepal.Controllers
 {
     public class WikiNepalDataController : Controller
     {
-        private readonly Helper _cc;
+        private readonly Helper _H;
 
 
-        public WikiNepalDataController(Helper cc)
+        public WikiNepalDataController(Helper H)
         {
-            _cc = cc;
+            _H = H;
         }
         public IActionResult Index()
         {
 
-            var results = _cc.GetData();
+            var results = _H.GetData();
 
                  
             return View(results);
