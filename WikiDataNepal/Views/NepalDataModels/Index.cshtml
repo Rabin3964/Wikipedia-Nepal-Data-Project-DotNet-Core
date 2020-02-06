@@ -4,19 +4,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<form asp-controller="NepalDataModels" asp-action="Index" method="get" style="margin-top:57px;    position: fixed;
+<form asp-controller="NepalDataModels" asp-action="Index" method="get" style="margin-top:57px;position: fixed;
             top: 0;
             width: 100%;
             z-index: 100;
             background-color:#FFFFFF;
            ">
     <p>
-        <b> Search:</b> <input type="text" name="SearchString">
+        Search: <input type="text" name="SearchString">
         <button type="submit" class="btn btn-success"> Search</button>
 
+        
 
+       
 
-        <b><label style="padding-left:400px ; "> Found </label> @ViewBag.SearchedData Results( @ViewBag.Time sec) </b>
+        <label style="padding-left:400px ;"> Found </label> @ViewBag.SearchedData Results( @ViewBag.Time sec) 
     </p>
 
     <p>
@@ -34,19 +36,34 @@
         {
             <tr>
                 <td>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/492px-Flag_of_Nepal.svg.png" alt="Alternate Text" style="height: 35px" />
+
+                    @if (item.Image == null)
+                    {
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/492px-Flag_of_Nepal.svg.png" alt="Alternate Text" style="height: 35px" />
+                    }
+                    else
+                    {
+                     <img src="@Url.Content(item.Image)" alt="Alternate Text" style="height: 35px"/>    
+                        @*@Html.DisplayFor(modelItem => item.Image)*@
+                    }
+
+
                     <b>
                         @Html.DisplayFor(modelItem => item.Title)
                     </b>
                     <br />
 
+                    <p>
+                        @if (item.Paragraph.Length > 250)
+                        {
+                            @item.Paragraph.Substring(0, 250) <a asp-action="Details" asp-route-id="@item.Id">...continue</a>
+                        }
+                        else
+                            @Html.DisplayFor(modelItem => item.Paragraph)
 
-                    @if (item.Paragraph.Length > 250)
-                    {
-                        @item.Paragraph.Substring(0, 250) <a asp-action="Details" asp-route-id="@item.Id">...continue</a>
-                    }
-                    else
-                        @Html.DisplayFor(modelItem => item.Paragraph)
+                    </p>
+
+
 
                 </td>
 
@@ -81,4 +98,5 @@
    class="btn btn-default @nextDisabled">
     Next
 </a>
+
 

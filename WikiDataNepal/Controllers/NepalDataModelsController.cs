@@ -30,6 +30,8 @@ namespace WikiDataNepal.Controllers
         // GET: NepalDataModels
         public async Task<IActionResult> Index(string SearchString, int? pageNumber, string sortOrder, string currentFilter)
         {
+            
+
             ViewData["CurrentSort"] = sortOrder;
             if (SearchString != null)
             {
@@ -48,12 +50,15 @@ namespace WikiDataNepal.Controllers
 
             if (!string.IsNullOrWhiteSpace(SearchString))
             {
-                Datas = Datas.Where(d => d.Title.Contains(SearchString) || d.Paragraph.Contains(SearchString));
-
+                Datas = Datas.Where(d => d.Title.Contains(SearchString) || d.Paragraph.Contains(SearchString));               
+                
             }
+
+           
             sw.Stop();
 
             ViewBag.SearchedData = Datas.Count();
+            
 
             ViewBag.Time = sw.Elapsed.TotalMilliseconds;
 
@@ -146,7 +151,7 @@ namespace WikiDataNepal.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Paragraph")] NepalDataModel nepalDataModel)
+        public async Task<IActionResult> Create([Bind("Id,Title,Paragraph,Image")] NepalDataModel nepalDataModel)
         {
             if (ModelState.IsValid)
             {
@@ -178,7 +183,7 @@ namespace WikiDataNepal.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Paragraph")] NepalDataModel nepalDataModel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Paragraph,Image")] NepalDataModel nepalDataModel)
         {
             if (id != nepalDataModel.Id)
             {

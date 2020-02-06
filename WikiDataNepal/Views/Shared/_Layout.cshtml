@@ -4,18 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WikiDataNepal</title>
+
+
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <style>
+        span.highlight{
+  background: #f1c40f;
+}
+
         .navbar {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 100;
-            border:0px;
+            border: 0px;
         }
-       
 
+
+
+        /* Style the list */
+        .demo-links {
+            border-bottom: none;
+            padding: 5px 5px;
+            line-height: 36px;
+        }
     </style>
 </head>
 <body>
@@ -39,7 +53,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="NepalDataModels" asp-action="Search">Search</a>
                         </li>
                     </ul>
-                </div>              
+                </div>
             </div>
         </nav>
     </header>
@@ -51,12 +65,22 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            Programmed by 'Rabin Raut' &copy; 
+            Programmed by 'Rabin Raut' &copy;
         </div>
     </footer>
+   
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
+
+
+   
+
+
+
+
+
 </body>
 </html>

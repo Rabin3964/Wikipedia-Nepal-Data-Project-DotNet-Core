@@ -33,8 +33,8 @@ C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\bin\Debug\netcoreapp3
 C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\bin\Debug\netcoreapp3.1\WikiNepalDataClassLibrary.runtimeconfig.dev.json
 C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\bin\Debug\netcoreapp3.1\WikiNepalDataClassLibrary.dll
 C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\bin\Debug\netcoreapp3.1\WikiNepalDataClassLibrary.pdb
-C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\obj\Debug\netcoreapp3.1\WikiNepalDataClassLibrary.csprojAssemblyReference.cache
 C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\obj\Debug\netcoreapp3.1\WikiNepalDataClassLibrary.AssemblyInfoInputs.cache
 C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\obj\Debug\netcoreapp3.1\WikiNepalDataClassLibrary.AssemblyInfo.cs
 C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\obj\Debug\netcoreapp3.1\WikiNepalDataClassLibrary.dll
 C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\obj\Debug\netcoreapp3.1\WikiNepalDataClassLibrary.pdb
+C:\Users\hp\Desktop\class intern 1\Solution1\WikiNepalData\obj\Debug\netcoreapp3.1\WikiNepalDataClassLibrary.csprojAssemblyReference.cache

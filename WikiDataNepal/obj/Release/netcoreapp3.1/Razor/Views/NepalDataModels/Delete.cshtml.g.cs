@@ -27,7 +27,7 @@ using WikiDataNepal.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eeb6c227fc4ed9f5738daf93bade7b488fdc4ffd", @"/Views/NepalDataModels/Delete.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"013d33dcf11024b0baa7ea8694ee171e648e9276", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e3c00c830f5ed33625bee0393e3405ed86a8d825", @"/Views/_ViewImports.cshtml")]
     public class Views_NepalDataModels_Delete : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<WikiNepalData.Model.NepalDataModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("type", "hidden", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

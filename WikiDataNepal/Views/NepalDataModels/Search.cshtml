@@ -8,19 +8,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <form asp-controller="NepalDataModels" asp-action="Search" method="get" style="margin-top:57px;position: fixed;
             top: 0;
             width: 100%;
             z-index: 100;
             background-color:#FFFFFF;">
     <p>
-        <b>Search:</b> <input type="text" name="searchString">
+        Search: <input type="text" name="searchString">
         <button type="submit" class="btn btn-success"> Search</button>
 
-        <b><label style="padding-left:400px ; "> Found </label> @ViewBag.SearchedData Results( @ViewBag.Time sec) </b>
+        <label style="padding-left:400px ; "> Found </label> @ViewBag.SearchedData Results( @ViewBag.Time sec) 
     </p>
 
 </form>
+
 
 
 <table class="table" style="margin-top:115px;">
@@ -30,9 +32,17 @@
         {
 
 
+
             <tr>
                 <td>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/492px-Flag_of_Nepal.svg.png" alt="Alternate Text" style="height:35px" />
+                    @if (item.Image == null)
+                    {
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/492px-Flag_of_Nepal.svg.png" alt="Alternate Text" style="height: 35px" />
+                    }
+                    else
+                    {
+                        <img src="@Url.Content(item.Image)" alt="Alternate Text" style="height: 35px"/>
+                    }
                     <b>
                         @Html.DisplayFor(modelItem => item.Title)
                     </b>
