@@ -15,9 +15,8 @@ namespace WikiNepalData.Model
 
         [StringLength(100000, MinimumLength = 20)]
         [Required]
-        public string Paragraph { get; set; }
-
-        
+        public string Paragraph { get; set; }        
+       
         public string Image { get; set; }
 
     }

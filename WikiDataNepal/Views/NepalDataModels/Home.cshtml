@@ -58,16 +58,19 @@
     </style>
 </head>
 <body>
-
+    <nav>
+        <a class="nav-link text-dark" asp-area="" asp-controller="NepalDataModels" asp-action="Index"> <b>Admin</b></a>
+    </nav>
     <div class="Top">
         <div class="Image" style="margin-left:450px; padding-top:50px;">
             <img src="~/img/VisitNepal.jpg" />
         </div>
         <div class="text" style="margin-left:600px; "><h1 style="color:blue;font-family: 'Lobster', cursive;">Wiki<span style="font-family:'Sigmar One', cursive;color:red;">Nepal</span>Data   <span style="color:green;font-family: 'Lobster', cursive;"> Search ...</span> </h1> </div>
         <form class="example" asp-controller="NepalDataModels" asp-action="Search" method="get" style="margin-left:550px; max-width:500px;">
-            <input type="text" name="searchString" placeholder="Search...">
+            <input type="text" name="searchString" placeholder="Search..." required>
             <button type="submit"><i class="fa fa-search" style="height:28.5px;"></i></button>
         </form>
+
 
     </div>
 
